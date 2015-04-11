@@ -14,7 +14,7 @@ watch ()
 }
 while $(watch $(ls -l $filename))
 do
-newfilename=$(date +"%F-%H%M%S")
+newfilename=`date +"%F-%H:%M:%S"`
 cp $filename $newfilename
 echo "">$filename
 done
