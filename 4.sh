@@ -12,7 +12,7 @@ watch ()
          echo false
          fi
 }
-while $(watch $(ls -l $filename))
+while $(watch $(du -k  $filename|awk '{print $1}'))
 do
 newfilename=`date +"%F-%H:%M:%S"`
 cp $filename $newfilename
